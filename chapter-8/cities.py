@@ -1,6 +1,9 @@
-def describe_city(name, country='USA'):
-    print(f"{name} is in {country}.")
+import print_cities
+# from print_cities import describe_city
+# from print_cities import describe_city as dc
+# import print_cities as pc
+# from print_cities import *
 
-describe_city('Rome', 'Italy')
-describe_city('Atlanta')
-describe_city('Vienna', 'Austria')
+print_cities.describe_city('Rome', 'Italy')
+print_cities.describe_city('Atlanta')
+print_cities.describe_city('Vienna', 'Austria')

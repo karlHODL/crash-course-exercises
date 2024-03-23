@@ -5,12 +5,14 @@ messages = ['Hello', 'Goodbye', 'Goodnight', 'Good morning',
 sent_messages = []
 
 def send_messages(message_list, sent_message_list):
+    """Simulate sending messages."""
     while message_list:
         current_message = message_list.pop()
         print(f"Sent: {current_message}.")
         sent_message_list.append(current_message)
 
 def show_messages(message_list):
+    """Display all messages in the list."""
     for message in message_list:
         print(message)
 
