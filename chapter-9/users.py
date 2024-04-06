@@ -21,16 +21,37 @@ class Users:
         """Reset the value of login_attempts to 0."""
         self.login_attempts = 0
 
+class Privaleges:
+    """A simple attempt to model a user's privileges."""
+    def __init__(self):
+        self.privaleges = ['can add post', 'can delete post', 'can ban user']
+
+    def show_privaleges(self):
+        """Print a list of privileges the user has."""
+        print("The user has the following privileges:")
+        for privalege in self.privaleges:
+            print(f"\t- {privalege}")
+
+class Admin(Users):
+    """Represents aspects of a user, specific to admin."""
+    def __init__(self, first_name, last_name, age, location):
+        super().__init__(first_name, last_name, age, location)
+        self.privileges = Privaleges()
+
+
 user1 = Users('John', 'Doe', 25, 'New York')
 
-user1.describe_user()
-user1.greet_user()
+admin = Admin('Jane', 'Smith', 30, 'Los Angeles')
+admin.privileges.show_privaleges()
 
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
+# user1.describe_user()
+# user1.greet_user()
 
-print(f"Login attempts: {user1.login_attempts}")
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
 
-user1.reset_login_attempts()
-print(f"Login attempts: {user1.login_attempts}")
+# print(f"Login attempts: {user1.login_attempts}")
+
+# user1.reset_login_attempts()
+# print(f"Login attempts: {user1.login_attempts}")
