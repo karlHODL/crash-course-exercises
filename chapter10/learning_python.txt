@@ -1,0 +1,4 @@
+In Python you can use the `os` module to get the current working directory.
+In Python you can associate data and methods to a class using the `class` keyword.
+In Python you can use functions to encapsulate code that you want to reuse.
+In Python you can loop over information using the `for` keyword.
