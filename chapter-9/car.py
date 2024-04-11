@@ -1,3 +1,5 @@
+"""A set of classes that can be used to represent a car."""
+
 class Car:
     def __init__(self, make, model, year):
         """Initialize attributes to describe a car."""
@@ -31,12 +33,3 @@ class Car:
             self.odometer_reading += miles
         else:
             print("You can't roll back an odometer!")
-    
-my_new_car = Car('audi', 'a4', 2019)
-print(my_new_car.get_descriptive_name())
-
-my_new_car.update_odometer(23_500)
-my_new_car.read_odometer()
-
-my_new_car.increment_odometer(100)
-my_new_car.read_odometer()
