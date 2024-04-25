@@ -9,7 +9,7 @@ def count_words(path):
     try:   
         contents = file.read_text(encoding='utf-8')
     except FileNotFoundError:
-        print(f"The file {path} does not exist")
+        print(f"The file {path} does not exist.")
     except UnicodeDecodeError:
         print(f"Error decoding the file {path}")
     else:
